@@ -15,36 +15,36 @@ const BENTO_ITEMS: BentoItem[] = [
   {
     id: 0,
     num: "01",
-    title: "Sovereign Neural Edge Core",
+    title: "Agentic Data Routing Fabric",
     tag: "Sub-15ms Latency",
-    description: "Run private, enterprise-fine-tuned foundation models across an isolated edge fabric. Fully managed TPU clusters guarantee consistent execution without cold-starts or shared queue noise.",
-    cta: "View Hardware Map",
+    description: "Run autonomous, enterprise-fine-tuned data agents across an isolated routing fabric. Fully managed agent nodes guarantee consistent processing without cold-starts or shared queue noise.",
+    cta: "View Routing Map",
     icon: Cpu,
   },
   {
     id: 1,
     num: "02",
-    title: "Dynamic Weight Swapping",
+    title: "Dynamic Schema Adaptation",
     tag: "3ms Adaptation",
-    description: "Instantly swap model adapters in physical memory (vRAM) mid-inference stream without clearing context buffers. Run multi-tenant custom models at single-tenant costs.",
-    cta: "Read Compiler Docs",
+    description: "Instantly map and normalize unstructured data schemas in physical memory mid-stream without clearing context buffers. Transform complex data shapes on the fly with zero overhead.",
+    cta: "Read Schema Docs",
     icon: Layers,
   },
   {
     id: 2,
     num: "03",
-    title: "Hardware Secure Enclaves",
+    title: "Confidential Data Enclaves",
     tag: "TEE Confidentiality",
-    description: "Hardware-enforced confidential computing enclaves (TEE) secure prompt weights and user datasets. Zero-retention architecture makes compliance built-in by physical design.",
+    description: "Hardware-enforced confidential computing enclaves (TEE) secure ingestion pipelines and sensitive databases. Zero-retention architecture makes compliance built-in by physical design.",
     cta: "Verify Cryptography",
     icon: ShieldCheck,
   },
   {
     id: 3,
     num: "04",
-    title: "Hyper-Scale Vector Compiler",
+    title: "Hyper-Scale Vector ETL",
     tag: "100M+ QPS pipeline",
-    description: "Hardware-accelerated vectorized storage and high-dimensional semantic search directly mapped onto compiler memory channels, enabling instant RAG response cycles with absolute zero indexing overhead.",
+    description: "Hardware-accelerated vectorized transformations and high-dimensional semantic search directly mapped onto data memory channels, enabling instant RAG preparation with zero indexing overhead.",
     cta: "Deploy Pipeline",
     icon: Database,
   },
@@ -89,7 +89,7 @@ export default function BentoAccordion() {
         <div className="flex gap-1.5 items-center">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
           <span className="font-mono text-xs uppercase tracking-widest text-[#86868b]">
-            Edge Core Live Grid
+            Agent Live Routing Grid
           </span>
         </div>
         <div className="text-3xl font-extrabold font-mono tracking-wider text-[#f5f5f7]">
@@ -115,7 +115,7 @@ export default function BentoAccordion() {
             }`}
           />
         </div>
-        <div className="text-[10px] font-mono text-[#86868b] leading-none">LO-RA A</div>
+        <div className="text-[10px] font-mono text-[#86868b] leading-none">SCHEMA A</div>
       </div>
 
       <div className="flex gap-2 w-full max-w-[160px] justify-between">
@@ -128,14 +128,14 @@ export default function BentoAccordion() {
             }`}
           />
         </div>
-        <div className="text-[10px] font-mono text-[#86868b] leading-none">LO-RA B</div>
+        <div className="text-[10px] font-mono text-[#86868b] leading-none">SCHEMA B</div>
       </div>
 
       <div className="text-xs font-mono tracking-widest uppercase text-center mt-1">
         {isActive ? (
-          <span className="text-[#00e676] font-bold">SWAP SUCCESSFUL // 3.2ms</span>
+          <span className="text-[#00e676] font-bold">ADAPTATION SUCCESSFUL // 3.2ms</span>
         ) : (
-          <span className="text-[#86868b]">STANDBY SWAPPING LAYER</span>
+          <span className="text-[#86868b]">STANDBY ADAPTATION LAYER</span>
         )}
       </div>
     </div>
@@ -168,11 +168,11 @@ export default function BentoAccordion() {
     <div className="relative w-full h-40 bg-[#070709] rounded-xl border border-[#1d1d1f] overflow-hidden flex items-center justify-center p-4">
       <div className="w-full flex flex-col gap-1.5 font-mono text-xs leading-relaxed text-[#86868b] max-h-[120px] overflow-hidden">
         <div className={isActive ? "text-white" : ""}>
-          &gt; neuroflow-compiler compile --weights=sovereign-v2
+          &gt; neuroflow-pipeline run --schema=sovereign-v2
         </div>
         <div>[0.001s] loaded index block (100,000,000 vectors)</div>
         <div className={isActive ? "text-[#00e676]" : ""}>
-          [0.003s] pipeline direct compile: channel 3 OK
+          [0.003s] pipeline direct transformation: channel 3 OK
         </div>
         <div>[0.004s] latency SLA: sub-1.2ms throughput</div>
         {isActive && (
@@ -207,16 +207,16 @@ export default function BentoAccordion() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121214]/90 border border-[#1d1d1f] backdrop-blur-md">
             <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
             <span className="text-xs uppercase tracking-widest font-extrabold text-[#86868b]">
-              Engine Architecture v2.0
+              Automation Engine v2.0
             </span>
           </div>
 
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-[#f5f5f7] via-[#d2d2d7] to-[#86868b] max-w-4xl leading-none font-display">
-            Deeply integrated infrastructure.
+            Deeply integrated automation.
           </h2>
           <p className="text-lg md:text-xl text-[#86868b] max-w-3xl font-light leading-relaxed">
-            We built our stack from bare-metal physical layers upwards to bypass the
-            inefficiencies of virtualized legacy hypervisors.
+            We built our data pipelines from the compiler level upwards to bypass the
+            latency overhead of virtualized legacy databases.
           </p>
         </div>
 

@@ -19,7 +19,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="leading-relaxed font-light text-[#86868b]">
-              Ultra-premium on-demand sovereign AI compute infrastructure for global foundation models.
+              Ultra-premium on-demand sovereign AI data automation platform for global enterprise pipelines.
             </p>
           </div>
 
@@ -29,16 +29,16 @@ export default function Footer() {
               Sovereign Cloud
             </h4>
             <a href="#features" className="hover:text-[#f5f5f7] transition-colors duration-200">
-              TPU v5p Clusters
+              Agentic Routing Fabric
             </a>
             <a href="#features" className="hover:text-[#f5f5f7] transition-colors duration-200">
-              Weight-Swapping Compiler
+              Schema-Adaptation Compiler
             </a>
             <a href="#features" className="hover:text-[#f5f5f7] transition-colors duration-200">
               Confidential Enclaves
             </a>
             <a href="#features" className="hover:text-[#f5f5f7] transition-colors duration-200">
-              Edge Routing Fabric
+              Edge Sync Fabric
             </a>
           </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
               Latency Guarantee Map
             </a>
             <a href="#" className="hover:text-[#f5f5f7] transition-colors duration-200">
-              Disaster Failover Node
+              Disaster Failover Pipeline
             </a>
           </div>
 
@@ -92,7 +92,7 @@ export default function Footer() {
               &copy; {currentYear} NeuroFlow AI Platform. All rights reserved globally.
             </p>
             <p className="text-[10px] text-[#444] leading-none">
-              All benchmark tests conducted on virtual TPC-H isolated configurations using standard SLA controls.
+              All benchmark tests conducted on virtual TPC-H isolated data pipeline configurations using standard SLA controls.
             </p>
           </div>
           <div className="flex gap-6">
@@ -100,7 +100,7 @@ export default function Footer() {
               Privacy Policy
             </a>
             <a href="#" className="hover:text-[#f5f5f7] transition-colors duration-200">
-              Terms of Infrastructure
+              Terms of Service
             </a>
           </div>
         </div>

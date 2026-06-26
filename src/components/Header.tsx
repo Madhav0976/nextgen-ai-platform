@@ -23,13 +23,13 @@ export default function Header() {
             href="#features"
             className="text-sm font-bold text-[#86868b] hover:text-[#f5f5f7] tracking-wider uppercase transition-colors duration-200"
           >
-            Core Engine
+            Automation Engine
           </a>
           <a
             href="#pricing"
             className="text-sm font-bold text-[#86868b] hover:text-[#f5f5f7] tracking-wider uppercase transition-colors duration-200"
           >
-            Sovereign Pricing
+            Matrix Pricing
           </a>
           <a
             href="https://github.com"
@@ -47,7 +47,7 @@ export default function Header() {
             href="#pricing"
             className="px-6 py-2.5 rounded-full bg-[#f5f5f7] text-black text-sm font-bold tracking-wider uppercase hover:bg-white transition-all duration-200 shadow-sm"
           >
-            Deploy Node
+            Deploy Pipeline
           </a>
         </div>
 
@@ -71,14 +71,14 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
             className="text-sm font-bold text-[#86868b] hover:text-[#f5f5f7] tracking-wider uppercase py-1"
           >
-            Core Engine
+            Automation Engine
           </a>
           <a
             href="#pricing"
             onClick={() => setIsOpen(false)}
             className="text-sm font-bold text-[#86868b] hover:text-[#f5f5f7] tracking-wider uppercase py-1"
           >
-            Sovereign Pricing
+            Matrix Pricing
           </a>
           <a
             href="https://github.com"
@@ -93,7 +93,7 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
             className="w-full text-center py-3 rounded-lg bg-[#f5f5f7] text-black text-sm font-bold tracking-wider uppercase mt-2"
           >
-            Deploy Node
+            Deploy Pipeline
           </a>
         </div>
       </div>

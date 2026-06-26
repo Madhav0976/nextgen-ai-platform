@@ -24,9 +24,9 @@ export default function Hero() {
             Think differently.
           </h1>
           <p className="text-xl md:text-3xl text-[#86868b] font-light max-w-3xl mx-auto tracking-normal leading-relaxed mt-4">
-            The world's first hardware-isolated AI infrastructure platform.
-            Deploy private TPU v5p nodes, compile model weights dynamically,
-            and scale sovereign workflows with zero latency compromise.
+            The world's first agentic AI data automation platform.
+            Deploy sovereign data agents, coordinate complex ETL pipelines,
+            and scale automated workflows with zero latency compromise.
           </p>
         </div>
 
@@ -34,21 +34,21 @@ export default function Hero() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 py-5 px-10 rounded-3xl bg-[#070708]/50 border border-[#111113] backdrop-blur-md max-w-3xl w-full flex-wrap mt-2">
           <div className="flex flex-col items-center justify-center gap-1.5">
             <span className="font-mono text-xs text-[#86868b] tracking-wider uppercase">
-              Global Clusters
+              Active Data Agents
             </span>
-            <span className="text-2xl font-extrabold text-[#f5f5f7] font-display">18 Zones</span>
+            <span className="text-2xl font-extrabold text-[#f5f5f7] font-display">12,000+ Agents</span>
           </div>
           <div className="flex flex-col items-center justify-center gap-1.5">
             <span className="font-mono text-xs text-[#86868b] tracking-wider uppercase">
-              Physical SLA
+              Sync Latency
             </span>
-            <span className="text-2xl font-extrabold text-[#00e676] font-display">&lt; 15ms</span>
+            <span className="text-2xl font-extrabold text-[#00e676] font-display">&lt; 15ms SLA</span>
           </div>
           <div className="hidden md:flex flex-col items-center justify-center gap-1.5">
             <span className="font-mono text-xs text-[#86868b] tracking-wider uppercase">
-              Compliance Standard
+              Data Compliance
             </span>
-            <span className="text-2xl font-extrabold text-[#f5f5f7] font-display">Sovereign TEE</span>
+            <span className="text-2xl font-extrabold text-[#f5f5f7] font-display">SOC2 / TEE</span>
           </div>
         </div>
 
@@ -58,14 +58,14 @@ export default function Hero() {
             href="#pricing"
             className="w-full sm:w-auto px-10 py-5 rounded-full bg-[#f5f5f7] text-black text-sm font-bold tracking-wider uppercase hover:bg-white transition-all duration-300 shadow-[0_0_35px_rgba(255,255,255,0.18)] hover:shadow-[0_0_50px_rgba(255,255,255,0.35)] hover:scale-[1.03] flex items-center justify-center gap-2 group cursor-pointer"
           >
-            <span>Sovereign Deployment</span>
+            <span>Deploy Data Pipeline</span>
             <ArrowRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
           </a>
           <a
             href="#features"
             className="w-full sm:w-auto px-10 py-5 rounded-full bg-[#121214] border border-[#222] text-[#86868b] hover:text-[#f5f5f7] hover:border-[#444] text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:bg-[#1a1a1d] hover:scale-[1.03] flex items-center justify-center gap-2 cursor-pointer"
           >
-            <span>Explore Core Engine</span>
+            <span>Explore Automation Engine</span>
           </a>
         </div>
       </div>

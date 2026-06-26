@@ -33,14 +33,14 @@ export const PRICING_MATRIX = {
   tiers: [
     {
       id: "developer",
-      name: "Developer Core",
+      name: "Developer Auto-Data",
       basePriceUSD: 24,
-      description: "For builders, experimenters, and serverless AI applications.",
+      description: "For builders, experimenters, and serverless AI data automation.",
       features: [
-        "15M dynamic context tokens / mo",
-        "Standard multi-region TPU inference",
+        "15M automated transactions / mo",
+        "Standard multi-region pipeline sync",
         "Sub-40ms baseline execution",
-        "Shared serverless GPU allocation",
+        "Shared agentic serverless pool",
         "Community & Discord help desk",
       ],
       badge: "Sandbox Live",
@@ -51,29 +51,29 @@ export const PRICING_MATRIX = {
       basePriceUSD: 89,
       description: "Sovereign nodes for production scale workloads and scaling teams.",
       features: [
-        "300M priority context tokens / mo",
-        "Isolated virtual TPU v5p clusters",
-        "Sub-15ms guaranteed latency SLA",
-        "Custom weights & fine-tuning adaptors",
+        "300M priority transactions / mo",
+        "Isolated virtual execution clusters",
+        "Sub-15ms guaranteed sync latency",
+        "Custom schema adapters & connectors",
         "24/7 dedicated engineering hotline",
-        "Zero-retention HIPAA security",
+        "Zero-retention HIPAA secure pipelines",
       ],
       popular: true,
       badge: "Most Selected",
     },
     {
       id: "custom",
-      name: "NeuroFlow Dedicated",
+      name: "NeuroFlow Sovereign Cloud",
       basePriceUSD: 349,
       features: [
-        "Unlimited context throughput",
-        "Bare-metal private H100/A100 instances",
-        "Sub-5ms ultra-edge inference speed",
-        "Real-time weight-merging compiler",
+        "Unlimited data ingestion throughput",
+        "Bare-metal private pipeline clusters",
+        "Sub-5ms ultra-edge sync speed",
+        "Real-time vector-merging ETL compilers",
         "White-glove platform integration team",
-        "On-premise sovereign cloud options",
+        "On-premise sovereign data options",
       ],
-      description: "Custom sovereign physical clusters tailored for foundation training.",
+      description: "Custom sovereign physical clusters tailored for enterprise data pipelines.",
       badge: "Extreme Power",
     },
   ] as TierConfig[],
@@ -305,11 +305,11 @@ export default function PricingSection() {
           </div>
 
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-[#f5f5f7] via-[#d2d2d7] to-[#86868b] max-w-4xl leading-none font-display">
-            On-Demand AI Compute.
+            On-Demand Data Automation.
           </h2>
           <p className="text-lg md:text-xl text-[#86868b] max-w-3xl font-light leading-relaxed">
-            Select your infrastructure class. All plans feature instant weight swapping,
-            hardware-enforced security enclaves, and sub-15ms edge routing.
+            Select your automation class. All plans feature instant schema adaptation,
+            hardware-enforced secure enclaves, and sub-15ms guaranteed data sync.
           </p>
 
           {/* Performance-Isolated Control Station */}
@@ -401,7 +401,7 @@ export default function PricingSection() {
                 Sovereign Data Protection SLA Included
               </h4>
               <p className="text-xs text-[#86868b] leading-relaxed">
-                All training weights are hosted on dedicated, physical bare-metal hardware. Zero cloud overlap.
+                All data pipelines and training datasets are hosted on dedicated, physical bare-metal hardware. Zero cloud overlap.
               </p>
             </div>
           </div>
