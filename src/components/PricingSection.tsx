@@ -148,27 +148,33 @@ function BillingToggle() {
   }, [billing]);
 
   return (
-    <div className="inline-flex p-1 bg-[#121214]/80 backdrop-blur-md rounded-full border border-[#1d1d1f] relative">
+    <div className="inline-flex p-1 bg-[#121214]/80 backdrop-blur-md rounded-full border border-[#1d1d1f] relative overflow-hidden h-[42px] items-center">
+      {/* Sliding background pill */}
+      <div 
+        className="absolute top-1 bottom-1 left-1 rounded-full bg-[#f5f5f7] transition-all duration-300 ease-out z-0 shadow-md"
+        style={{
+          width: "90px",
+          transform: billing === "monthly" ? "translateX(0px)" : "translateX(90px)"
+        }}
+      />
       <button
         onClick={() => toggle("monthly")}
-        className={`px-6 py-2 text-xs font-medium uppercase tracking-wider rounded-full transition-all duration-300 cursor-pointer ${
-          billing === "monthly"
-            ? "bg-[#f5f5f7] text-black shadow-lg"
-            : "text-[#86868b] hover:text-[#f5f5f7]"
+        className={`relative z-10 px-6 py-2 text-xs font-medium uppercase tracking-wider rounded-full transition-colors duration-300 cursor-pointer w-[90px] text-center ${
+          billing === "monthly" ? "text-black font-bold" : "text-[#86868b] hover:text-[#f5f5f7]"
         }`}
       >
         Monthly
       </button>
       <button
         onClick={() => toggle("annual")}
-        className={`px-6 py-2 text-xs font-medium uppercase tracking-wider rounded-full transition-all duration-300 cursor-pointer relative ${
-          billing === "annual"
-            ? "bg-[#f5f5f7] text-black shadow-lg"
-            : "text-[#86868b] hover:text-[#f5f5f7]"
+        className={`relative z-10 px-6 py-2 text-xs font-medium uppercase tracking-wider rounded-full transition-colors duration-300 cursor-pointer w-[90px] text-center relative ${
+          billing === "annual" ? "text-black font-bold" : "text-[#86868b] hover:text-[#f5f5f7]"
         }`}
       >
         Annual
-        <span className="absolute -top-1.5 -right-3 px-1.5 py-0.5 bg-gradient-to-r from-neutral-200 to-neutral-400 text-black font-extrabold text-[8px] rounded-full uppercase tracking-tight scale-90">
+        <span className={`absolute -top-1.5 -right-2 px-1.5 py-0.5 font-extrabold text-[8px] rounded-full uppercase tracking-tight scale-90 transition-colors duration-300 ${
+          billing === "annual" ? "bg-black text-white" : "bg-gradient-to-r from-neutral-200 to-neutral-400 text-black"
+        }`}>
           -20%
         </span>
       </button>
@@ -321,27 +327,36 @@ export default function PricingSection() {
 
         {/* Dynamic Matrix Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {PRICING_MATRIX.tiers.map((tier) => (
-            <div
-              key={tier.id}
-              className={`flex flex-col justify-between p-8 rounded-3xl bg-[#0a0a0a]/60 backdrop-blur-2xl border transition-all duration-500 hover:scale-[1.02] flex-wrap ${
-                tier.popular
-                  ? "border-neutral-500 shadow-[0_0_40px_rgba(245,245,247,0.04)]"
-                  : "border-[#1d1d1f] hover:border-[#333]"
-              }`}
-            >
-              <div className="flex flex-col gap-6">
-                {/* Header Row */}
-                <div className="flex justify-between items-start flex-wrap gap-2">
-                  <span className="text-sm font-mono text-[#86868b] tracking-wider uppercase">
-                    [ 0{PRICING_MATRIX.tiers.findIndex((t) => t.id === tier.id) + 1} // Platform Class ]
-                  </span>
-                  {tier.badge && (
-                    <span className="px-3 py-1 text-xs font-extrabold uppercase tracking-widest bg-white text-black rounded-full shadow-sm">
-                      {tier.badge}
+          {PRICING_MATRIX.tiers.map((tier, idx) => {
+            const delayClass = 
+              idx === 0 ? "delay-100" :
+              idx === 1 ? "delay-200" : "delay-300";
+
+            return (
+              <div
+                key={tier.id}
+                className={`flex flex-col justify-between p-8 rounded-3xl bg-[#0a0a0a]/60 backdrop-blur-2xl border transition-all duration-500 hover:scale-[1.02] flex-wrap animate-fade-in-up ${delayClass} ${
+                  tier.popular
+                    ? "border-neutral-500 shadow-[0_0_40px_rgba(245,245,247,0.04)]"
+                    : "border-[#1d1d1f] hover:border-[#333]"
+                }`}
+              >
+                <div className="flex flex-col gap-6">
+                  {/* Header Row */}
+                  <div className="flex justify-between items-start flex-wrap gap-2">
+                    <span className="text-sm font-mono text-[#86868b] tracking-wider uppercase">
+                      [ 0{idx + 1} // Platform Class ]
                     </span>
-                  )}
-                </div>
+                    {tier.badge && (
+                      <span className={`px-3 py-1 text-xs font-extrabold uppercase tracking-widest rounded-full shadow-sm ${
+                        tier.popular
+                          ? "bg-gradient-to-r from-[#f5f5f7] via-[#d2d2d7] to-[#86868b] text-black border border-white/20 hover:scale-105 transition-transform duration-300"
+                          : "bg-[#111] text-[#86868b] border border-[#222]"
+                      }`}>
+                        {tier.badge}
+                      </span>
+                    )}
+                  </div>
 
                 {/* Name */}
                 <div className="flex flex-col gap-1.5">
@@ -386,12 +401,13 @@ export default function PricingSection() {
               >
                 Provision Compute Node
               </button>
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
 
         {/* Enterprise Bottom SLA Note */}
-        <div className="p-8 rounded-3xl bg-[#030303]/60 backdrop-blur-md border border-[#1d1d1f] flex flex-col sm:flex-row gap-5 items-center justify-between">
+        <div className="p-8 rounded-3xl bg-[#030303]/60 backdrop-blur-md border border-[#1d1d1f] flex flex-col sm:flex-row gap-5 items-center justify-between animate-fade-in-up delay-400">
           <div className="flex items-center gap-4">
             <div className="p-3 rounded-full bg-neutral-900 border border-neutral-800 text-yellow-500">
               <ShieldAlert className="w-6 h-6" />

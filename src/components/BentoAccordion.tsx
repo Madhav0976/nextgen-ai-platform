@@ -203,7 +203,7 @@ export default function BentoAccordion() {
     <section id="features" className="py-24 md:py-32 relative z-10 bg-transparent px-4 sm:px-6 lg:px-8 border-b border-[#111]">
       <div className="max-w-7xl mx-auto flex flex-col gap-16 md:gap-24">
         {/* Header Block */}
-        <div className="flex flex-col items-center text-center gap-6">
+        <div className="flex flex-col items-center text-center gap-6 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121214]/90 border border-[#1d1d1f] backdrop-blur-md">
             <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
             <span className="text-xs uppercase tracking-widest font-extrabold text-[#86868b]">
@@ -228,13 +228,17 @@ export default function BentoAccordion() {
               const isActive = activeIndex === item.id;
               // Node width scaling: Item 0 and 3 are larger, Item 1 and 2 are smaller
               const colSpanClass = item.id === 0 || item.id === 3 ? "col-span-2" : "col-span-1";
+              const delayClass = 
+                item.id === 0 ? "delay-100" :
+                item.id === 1 ? "delay-200" :
+                item.id === 2 ? "delay-300" : "delay-400";
 
               return (
                 <div
                   key={item.id}
                   id={`bento-node-${item.id}`}
                   onMouseEnter={() => setActiveIndex(item.id)}
-                  className={`flex flex-col justify-between p-8 rounded-3xl bg-[#0a0a0a]/60 backdrop-blur-2xl border transition-all duration-500 cursor-pointer ${colSpanClass} ${
+                  className={`flex flex-col justify-between p-8 rounded-3xl bg-[#0a0a0a]/60 backdrop-blur-2xl border transition-all duration-500 cursor-pointer ${colSpanClass} animate-fade-in-up ${delayClass} ${
                     isActive
                       ? "border-neutral-500 scale-[1.02] shadow-[0_0_30px_rgba(255,255,255,0.03)]"
                       : "border-[#1d1d1f] hover:border-neutral-800"
@@ -282,12 +286,16 @@ export default function BentoAccordion() {
           <div className="grid md:hidden grid-cols-1 gap-4">
             {BENTO_ITEMS.map((item) => {
               const isOpen = activeIndex === item.id;
+              const delayClass = 
+                item.id === 0 ? "delay-100" :
+                item.id === 1 ? "delay-150" :
+                item.id === 2 ? "delay-200" : "delay-250";
 
               return (
                 <div
                   key={item.id}
                   id={`accordion-node-${item.id}`}
-                  className={`border rounded-3xl bg-[#0a0a0a]/60 backdrop-blur-2xl overflow-hidden transition-all duration-300 ${
+                  className={`border rounded-3xl bg-[#0a0a0a]/60 backdrop-blur-2xl overflow-hidden transition-all duration-300 animate-fade-in-up ${delayClass} ${
                     isOpen ? "border-neutral-500" : "border-[#1d1d1f]"
                   }`}
                 >

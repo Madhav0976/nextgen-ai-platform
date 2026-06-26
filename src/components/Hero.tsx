@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="min-h-screen relative z-10 bg-transparent flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-32 text-center select-none">
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-8 md:gap-10">
         {/* Release Tag Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121214]/80 backdrop-blur-md border border-[#1d1d1f] transition-all duration-300 hover:border-neutral-700">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121214]/80 backdrop-blur-md border border-[#1d1d1f] transition-all duration-300 hover:border-neutral-700 animate-fade-in-up">
           <Terminal className="w-3 h-3 text-[#86868b]" />
           <span className="text-[10px] uppercase tracking-widest font-extrabold text-[#86868b]">
             Platform Core v2.0 Release Candidate
@@ -17,7 +17,7 @@ export default function Hero() {
         </div>
 
         {/* Apple-Level Majestic Title */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 animate-fade-in-up delay-100">
           <h1 className="text-6xl sm:text-7xl md:text-9xl font-extrabold tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#f5f5f7] via-[#d2d2d7] to-[#86868b] font-display">
             NeuroFlow.
             <br />
@@ -31,18 +31,22 @@ export default function Hero() {
         </div>
 
         {/* Real-time Infrastructure Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 py-5 px-10 rounded-3xl bg-[#070708]/50 border border-[#111113] backdrop-blur-md max-w-3xl w-full flex-wrap mt-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 py-5 px-10 rounded-3xl bg-[#070708]/50 border border-[#111113] backdrop-blur-md max-w-3xl w-full flex-wrap mt-2 animate-fade-in-up delay-200">
           <div className="flex flex-col items-center justify-center gap-1.5">
             <span className="font-mono text-xs text-[#86868b] tracking-wider uppercase">
               Active Data Agents
             </span>
-            <span className="text-2xl font-extrabold text-[#f5f5f7] font-display">12,000+ Agents</span>
+            <span className="text-2xl font-extrabold text-[#f5f5f7] font-display flex items-center gap-2">
+              12,000+ <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
+            </span>
           </div>
           <div className="flex flex-col items-center justify-center gap-1.5">
             <span className="font-mono text-xs text-[#86868b] tracking-wider uppercase">
               Sync Latency
             </span>
-            <span className="text-2xl font-extrabold text-[#00e676] font-display">&lt; 15ms SLA</span>
+            <span className="text-2xl font-extrabold text-[#00e676] font-display flex items-center gap-2">
+              &lt; 15ms SLA <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
+            </span>
           </div>
           <div className="hidden md:flex flex-col items-center justify-center gap-1.5">
             <span className="font-mono text-xs text-[#86868b] tracking-wider uppercase">
@@ -53,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* Unbreakable Action Buttons (Flex Wrap prevents overlaps) */}
-        <div className="flex flex-col sm:flex-row flex-wrap gap-5 items-center justify-center w-full max-w-md sm:max-w-none mt-4">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-5 items-center justify-center w-full max-w-md sm:max-w-none mt-4 animate-fade-in-up delay-300">
           <a
             href="#pricing"
             className="w-full sm:w-auto px-10 py-5 rounded-full bg-[#f5f5f7] text-black text-sm font-bold tracking-wider uppercase hover:bg-white transition-all duration-300 shadow-[0_0_35px_rgba(255,255,255,0.18)] hover:shadow-[0_0_50px_rgba(255,255,255,0.35)] hover:scale-[1.03] flex items-center justify-center gap-2 group cursor-pointer"

@@ -40,7 +40,7 @@ export default function App() {
       <Scene3D />
 
       {/* Ambient Radial Glowing Gradients (Bento Grid Theme Specific) */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden blueprint-grid">
         <div 
           className="absolute top-[-10%] left-[-10%] w-[120%] h-[120%]" 
           style={{ background: "radial-gradient(circle at 50% 50%, #121214 0%, #000000 75%)" }} 
