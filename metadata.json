@@ -1,0 +1,6 @@
+{
+  "name": "NeuroFlow AI Core v2.0",
+  "description": "An advanced, ultra-premium landing page for the NeuroFlow AI Platform with high-converting, responsive components.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
