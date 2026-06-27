@@ -33,7 +33,9 @@
 
 ## 🖼️ Application Interface Banner
 
-![NeuroFlow Application Banner Workspace](<img width="1919" height="943" alt="image" src="https://github.com/user-attachments/assets/53529e0a-ab99-4bcf-a838-ecc8c056257b" />)
+NeuroFlow Application Banner Workspace
+
+<img width="1919" height="943" alt="image" src="https://github.com/user-attachments/assets/53529e0a-ab99-4bcf-a838-ecc8c056257b" />
 
 ---
 
