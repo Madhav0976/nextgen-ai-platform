@@ -33,7 +33,7 @@
 
 ## 🖼️ Application Interface Banner
 
-![NeuroFlow Application Banner Workspace](https://raw.githubusercontent.com/Madhav0976/nextgen-ai-platform/main/screenshots/banner.png)
+![NeuroFlow Application Banner Workspace](<img width="1919" height="943" alt="image" src="https://github.com/user-attachments/assets/53529e0a-ab99-4bcf-a838-ecc8c056257b" />)
 
 ---
 
@@ -53,8 +53,8 @@
 12. [Hackathon Journey & Retrospective](#-hackathon-journey--retrospective)
 13. [Future Improvements](#-future-improvements)
 14. [Contributing Guidelines](#-contributing-guidelines)
-15. [License](#-license)
-16. [Author & Connection Profiles](#-author--connection-profiles)
+15. [Author & Connection Profiles](#-author--connection-profiles)
+16. [License](#-license)
 
 ---
 
